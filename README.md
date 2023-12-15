@@ -30,6 +30,8 @@ make shure existing db is copied to or accessed from Christmas Community Grouped
 
 **npm** run install and copy the dbs folder from the christmas-communitys module folder to the christmas-community-groupss dbs folder
 
+See section `Grouping` for further instructions
+
 ## Screenshots
 ![Screenshot](screenshots/main.png)
 ![Screenshot](screenshots/list.png)
@@ -165,7 +167,7 @@ Christmas Community gets data about products automatically with [Wingysam/get-pr
 
 # Grouping
 #### How to enable
-- Make and be shure it works
+- Make and be shure you know how it works
 - ADD an ENV GROUPING and set it to true
 - For existing setup continue on this sidequest
 	- it is reccomended nobody access the install in this state
