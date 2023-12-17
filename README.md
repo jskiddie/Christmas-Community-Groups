@@ -167,7 +167,7 @@ Christmas Community gets data about products automatically with [Wingysam/get-pr
 
 # Grouping
 #### How to enable
-- Make and be shure you know how it works
+- Make and be shure you have a backup and know it works
 - ADD an ENV GROUPING and set it to true
 - For existing setup continue on this sidequest
 	- it is reccomended nobody access the install in this state
@@ -184,14 +184,4 @@ Christmas Community gets data about products automatically with [Wingysam/get-pr
 	- click "Add users to group"
 - once a user is added to a group grouping is disabled for them, they can only see lists of people in his group,
   his lists can be seen by everyone he shares a group with as well as users for whom grouping is disabled
-
-# Contributors
-As of writing, there are no code contributors to the main project. However, there are issue contributors and I appreciate these! Ideas on which features to add and bug reports are very helpful. Thank you!
-
-## Language Contributors
-* English: [dotromain](https://github.com/dotromain), [o-pteron](https://github.com/o-pteron)
-* Czech: [drSchaps](https://github.com/drSchaps)
-* German: [PeteS4](https://github.com/PeteS4)
-* French: [zethis](https://github.com/zethis)
-* Spanish: [CantisW](https://github.com/CantisW)
 
