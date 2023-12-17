@@ -1,7 +1,7 @@
-> **_NOTE:_**  Currently in Beta and no helm charts for now open an issue if you need them
+> **_NOTE:_**  Currently in Beta. Migration guide below. No helm charts for now open an issue if you need them.
 
 # Christmas Community Groups
-In short a Fork of Christmas Community but with groups hacked in.
+In short a Fork of Christmas Community but with groups hacked in. Migration guide is below
 
 ![Docker Pulls](https://img.shields.io/docker/pulls/jskiddie/christmas-community-groups?style=for-the-badge)
 ![Version](https://img.shields.io/badge/dynamic/json?color=orange&label=Version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fjskidie%2FChristmas-Community-Groups%2Fmaster%2Fpackage.json&style=for-the-badge)
@@ -14,23 +14,6 @@ Web app for your family's Christmas shopping
 
 ## Purpose
 To create a simple place for your entire family to use to find gifts that people want, and to avoid double-gifting.
-
-## How to migrate from "normal" Christmas Community 
-**TLDR:**
-
-make shure existing db is copied to or accessed from Christmas Community Grouped
-
-**docker:**
-
-- copy database from existing container to temporary folder e.g.`docker cp christmas-community:/data/ /tmp/data` 
-- start the new container `See paragraph Docker` and stop it e.g.  `docker stop christmas-community-groups` 
-- copy database back into container e.g. `docker cp  /tmp/data christmas-community-groups:/`
-
-**docker-compose:**  swap the image in your docker_compose.cml for  `jskiddie/christmas-community-groups`
-
-**npm** run install and copy the dbs folder from the christmas-communitys module folder to the christmas-community-groupss dbs folder
-
-See section `Grouping` for further instructions
 
 ## Screenshots
 ![Screenshot](screenshots/main.png)
@@ -166,15 +149,8 @@ Visit `/` on the HTTP server to add an admin account.
 Christmas Community gets data about products automatically with [Wingysam/get-product-data](https://github.com/Wingysam/get-product-data). Please submit pull requests for new sites or fixes for changes to existing sites!
 
 # Grouping
-#### How to enable
-- Make and be shure you have a backup and know it works
-- ADD an ENV GROUPING and set it to true
-- For existing setup continue on this sidequest
-	- it is reccomended nobody access the install in this state
-	- Go to Settings and click the "migrate to groups button"
-- Done
-
-#### Setup
+## Setup
+- ADD an ENV GROUPING and set it to true 
 - By default grouping is disabled for everyone
 - create a new group under settings
 	- type in a group name
@@ -185,3 +161,21 @@ Christmas Community gets data about products automatically with [Wingysam/get-pr
 - once a user is added to a group grouping is disabled for them, they can only see lists of people in his group,
   his lists can be seen by everyone he shares a group with as well as users for whom grouping is disabled
 
+## How to migrate from "normal" Christmas Community 
+**TLDR:** make shure existing db is copied to or accessed from Christmas Community Grouped
+
+- Make and be shure you have a working backup.
+- ADD an ENV GROUPING and set it to true
+- Continue depending on your setup 
+  - **docker:**
+    - copy database from existing container to temporary folder e.g.`docker cp christmas-community:/data/ /tmp/data` 
+    - start the new container `See paragraph Docker` and stop it e.g.  `docker stop christmas-community-groups` 
+    - copy database back into container e.g. `docker cp  /tmp/data christmas-community-groups:/`
+  - **docker-compose:**  
+    - swap the image in your docker_compose.cml for  `jskiddie/christmas-community-groups`
+  - **npm** 
+    - Run install and copy the dbs folder (and secret.txt) from the christmas-communitys module folder to the christmas-community-groupss module folder (and secret.txt as well)
+- Start up your instance. (it is reccomended nobody accesses the server until completion of the Setup)
+- Go to Settings and click the "migrate to groups button"
+- Click "Migrate"
+- Continue as seen above under Setup under Grouping
