@@ -32,7 +32,7 @@ module.exports.strings = {
   ADMIN_SETTINGS_USERS_HEADER: 'Users',
  
   ADMIN_SETTINGS_GROUPS_HEADER: 'Groups',
-  ADMIN_SETTINGS_GROUPS_USEERS_HEADER: name => `Users in Group, "${name}"`,
+  ADMIN_SETTINGS_GROUPS_USEERS_HEADER: name => `Users in Group, ${name}`,
   ADMIN_SETTINGS_GROUPS_EDIT: 'Edit',
   ADMIN_SETTINGS_GROUPS_EDIT_DELETE_SUCCESS: name => `Successfully removed group ${name}`,
   ADMIN_SETTINGS_GROUPS_ADD_ERROR_GROUPNAME_EMPTY:'Groupname cannot be empty',
@@ -52,7 +52,7 @@ module.exports.strings = {
   ADMIN_SETTINGS_GOUPS_MIGRATE_TO_SUCCESS:'Migrated to groups successfully',
   ADMIN_SETTINGS_GROUPS_ADD_USER_HEADER:'Add users to group',
   ADMIN_GROUP_EDIT_DELETE_GROUP: name => `Remove group`,
-  ADMIN_GROUP_EDIT_EDITING_GROUP: name => `Editing group "${name}"`,
+  ADMIN_GROUP_EDIT_EDITING_GROUP: name => `Editing group ${name}`,
   ADMIN_SETTINGS_VERSION_INFO: 'Version Info',
   ADMIN_USER_EDIT_ACCOUNT_UNCONFIRMED: "This account hasn't been confirmed.",
   ADMIN_USER_EDIT_ADMIN_ISADMIN: name => `${name} is an admin.`,
