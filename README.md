@@ -162,7 +162,7 @@ npm start
 ## Setup
 Visit `/` on the HTTP server to add an admin account.
 
-# Adding Sites
+## Adding Sites
 Christmas Community gets data about products automatically with [Wingysam/get-product-data](https://github.com/Wingysam/get-product-data). Please submit pull requests for new sites or fixes for changes to existing sites!
 
 # Grouping

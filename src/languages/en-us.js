@@ -1,7 +1,8 @@
 module.exports.momentLocale = 'en'
 
+module.exports.notTranslated = englishString => `${englishString} (not yet translated into English)`
+
 module.exports.strings = {
-  _NOT_LOCALIZED: key => `${key} hasn't been translated to English yet.`,
   ADMIN_CLEAR_WISHLISTS_BUTTON: 'Clear all wishlists',
   ADMIN_CLEAR_WISHLISTS_DESCRIPTION: 'This will instantly <b>irreversibly delete all wishlists!</b> Consider making a backup of the database before using this.',
   ADMIN_CLEAR_WISHLISTS_HEADER: 'Wishlist Deletion',
@@ -115,7 +116,11 @@ module.exports.strings = {
   NOTE_SAVE_BUTTON: 'Save Item',
   NOTE_SUCCESS: 'Successfully saved!',
   NOTE_URL: 'URL',
+  PROFILE_COAT_SIZE: 'Suit/Blazer/Coat Size',
+  PROFILE_DRESS_SIZE: 'Dress Size',
+  PROFILE_HAT_SIZE: 'Hat Size',
   PROFILE_HEADER: 'Profile',
+  PROFILE_PANTS_SIZE: 'Pants Size',
   PROFILE_PASSWORD_BUTTON: 'Save',
   PROFILE_PASSWORD_NEW: 'New Password',
   PROFILE_PASSWORD_OLD_MISMATCH: 'Incorrect old password',
@@ -126,11 +131,18 @@ module.exports.strings = {
   PROFILE_PASSWORD_SUCCESS: 'Changed saved successfully!',
   PROFILE_PASSWORD_TITLE: name => `Profile Settings - Password - ${name}`,
   PROFILE_PFP_IMAGE_URL: 'Image URL',
+  PROFILE_PHONE_MODEL: 'Phone Model',
+  PROFILE_RING_SIZE: 'Ring Size',
   PROFILE_SAVE_PFP_DISABLED: 'Profile pictures are disabled.',
   PROFILE_SAVE_PFP_SUCCESS: 'Saved profile picture!',
   PROFILE_SECURITY_CHANGE_PASSWORD: 'Change Password',
   PROFILE_SECURITY: 'Security',
+  PROFILE_SHARED_INFORMATION: 'Shared Information',
+  PROFILE_SHIRT_SIZE: 'Shirt Size',
+  PROFILE_SHOE_SIZE: 'Shoe Size',
+  PROFILE_SWEATER_SIZE: 'Blouse/Sweater Size',
   PROFILE_TITLE: name => `Profile Settings - ${name}`,
+  PROFILE_UPDATE_INFO_SUCCESS: 'Updated shared information!',
   RESET_PASSWORD_BUTTON: 'Reset Password',
   RESET_PASSWORD_GREETING_EXPIRED: 'Your reset link has expired. Please ask for a new one.',
   RESET_PASSWORD_GREETING_INVALID: "This reset link isn't valid, perhaps the link was canceled or some characters at the end got cut off?",
