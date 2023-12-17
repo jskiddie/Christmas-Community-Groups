@@ -294,7 +294,8 @@ module.exports = ({ db, ensurePfp }) => {
           req.flash('success', _CC.lang('ADMIN_SETTINGS_GOUPS_MARRIAGE_SUCCESS', username))
         }
         else{
-          console.log(req.params.groupToMarry+ "does not exist can't marry")
+          req.flash('error ', _CC.lang('ADMIN_SETTINGS_GOUPS_MARRIAGE_ERROR', username))
+          console.log(username+ "does not exist can't marry")
         }
       } catch (error) {
         req.flash('error', `${error}`)
@@ -319,6 +320,7 @@ module.exports = ({ db, ensurePfp }) => {
           req.flash('success', _CC.lang('ADMIN_SETTINGS_GOUPS_DIVORCE_SUCCESS', username))
         }
         else{
+          req.flash('error ', _CC.lang('ADMIN_SETTINGS_GOUPS_DIVORCE_ERROR', username))
           console.log(username+ "does not exist can't divorce")
         }
       } catch (error) {

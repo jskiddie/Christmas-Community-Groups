@@ -44,7 +44,9 @@ module.exports.strings = {
   ADMIN_SETTINGS_GOUPS_MIGRATE_TO_BUTTON:'Migrate to Groups',
   ADMIN_SETTINGS_GOUPS_MIGRATE_TO:'',
   ADMIN_SETTINGS_GOUPS_MARRIAGE_SUCCESS: name => `Successfully added user ${name} to group`,
+  ADMIN_SETTINGS_GOUPS_MARRIAGE_ERROR: name => `Failed to add user ${name} to group --- does the user exist?`,
   ADMIN_SETTINGS_GOUPS_DIVORCE_SUCCESS: name => `Successfully removed user ${name} from group`,
+  ADMIN_SETTINGS_GOUPS_DIVORCE_ERROR: name => `Failed to remove user ${name} from group --- does the user exist?`,
 
   ADMIN_SETTINGS_GOUPS_MIGRATE_TO_SUCCESS:'Migrated to groups successfully',
   ADMIN_SETTINGS_GROUPS_ADD_USER_HEADER:'Add users to group',
