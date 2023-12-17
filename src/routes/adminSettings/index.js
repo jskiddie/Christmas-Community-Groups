@@ -90,7 +90,7 @@ async function marryUserToGroup (db, dbG, userId, groupId){
   for (const userId of user.groupedWith) {
     console.log("got this uid",userId)
     const otherUser = await db.get(userId)
-    otherUser.groupedWith = addAdditional(user.groupedWith,user._id )
+    otherUser.groupedWith = addAdditional(otherUser.groupedWith,user._id )
     await db.put(otherUser)
   }
   console.log("writing changes to db")
