@@ -44,8 +44,12 @@ _CC.config = config
     const lang = language.strings[key]
     if (!lang) {
       const nativeString = nativeLanguage.strings[key] ?? key
-      if (language.notTranslated) return language.notTranslated(nativeString)
-      return nativeString
+      if (language.notTranslated){
+        if (typeof nativeString === 'function') return language.notTranslated(nativeString(...args))
+        return language.notTranslated(nativeString)
+      }
+      if (typeof nativeString === 'function') return nativeString(...args)
+        return nativeString
     }
     if (typeof lang === 'function') return lang(...args)
     return lang
