@@ -158,8 +158,8 @@ Christmas Community gets data about products automatically with [Wingysam/get-pr
 - add a user to the group by clicking "edit" on the corrosponding group
 	- type in the correct name of the user under "username"
 	- click "Add users to group"
-- once a user is added to a group grouping is disabled for them, they can only see lists of people in his group,
-  his lists can be seen by everyone he shares a group with as well as users for whom grouping is disabled
+- once a user is added to a group grouping is enbaled for them, from then on they can only see lists of people in their group,
+  their lists can be seen by everyone they share a group with as well as users for whom grouping is disabled
 
 ## How to migrate from "normal" Christmas Community 
 **TLDR:** make shure existing db is copied to or accessed from Christmas Community Grouped
