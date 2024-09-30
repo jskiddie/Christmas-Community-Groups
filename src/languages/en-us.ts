@@ -1,8 +1,8 @@
-module.exports.momentLocale = 'en'
+export const momentLocale = 'en' as const
 
-module.exports.notTranslated = englishString => `${englishString} (not yet translated into English)`
+export const notTranslated = englishString => `${englishString} (not yet translated into English)`
 
-module.exports.strings = {
+export const strings = {
   ADMIN_CLEAR_WISHLISTS_BUTTON: 'Clear all wishlists',
   ADMIN_CLEAR_WISHLISTS_DESCRIPTION: 'This will instantly <b>irreversibly delete all wishlists!</b> Consider making a backup of the database before using this.',
   ADMIN_CLEAR_WISHLISTS_HEADER: 'Wishlist Deletion',
@@ -183,9 +183,11 @@ module.exports.strings = {
   WISHLIST_IMAGE: 'Image',
   WISHLIST_ITEM_MISSING: 'Failed to find item',
   WISHLIST_MOVE_DOWN: 'Move Down',
+  WISHLIST_MOVE_BOTTOM: 'Move Bottom',
   WISHLIST_MOVE_GUARD: 'Not correct user',
   WISHLIST_MOVE_INVALID: 'Invalid move',
   WISHLIST_MOVE_ITEM_DOWN: 'Move Item Down',
+  WISHLIST_MOVE_ITEM_BOTTOM: 'Move Item Bottom',
   WISHLIST_MOVE_ITEM_TOP: 'Move Item Top',
   WISHLIST_MOVE_ITEM_UP: 'Move Item Up',
   WISHLIST_MOVE_SUCCESS: 'Successfully moved item!',
@@ -219,4 +221,4 @@ module.exports.strings = {
   WISHLISTS_COUNTS_SELF: name => `${name}: ???/???`,
   WISHLISTS_COUNTS: (name, pledged, total) => `${name}: ${pledged}/${total}`,
   WISHLISTS_TITLE: `${_CC.config.siteTitle} - Wishlists`
-}
+} as const
