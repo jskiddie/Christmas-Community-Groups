@@ -11,7 +11,34 @@
       "program": "${workspaceFolder}/src/index.js",
       "env": {
         "PORT": "8888"
+      },
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch with Gouping",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/src/index.js",
+      "env": {
+        "PORT": "8888",
+        "GROUPING": "true" 
       }
-    }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch with Typescript and Grouping",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/built/index.js",
+      "env": {
+        "PORT": "8888",
+        "GROUPING": "true" 
+      }
+    },
   ]
 }
