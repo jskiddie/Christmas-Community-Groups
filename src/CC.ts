@@ -18,6 +18,7 @@ CC.lang = (await import ('./Language.js')).default
 
 const PouchDB = (await import('./PouchDB.js')).default
 CC.usersDb = new PouchDB('users')
+CC.groupsDb = new PouchDB('groups')
 
 const { WishlistManager } = await import('./structures/WishlistManager.js')
 CC.wishlistManager = new WishlistManager()

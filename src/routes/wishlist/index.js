@@ -35,7 +35,7 @@ export default function (db) {
         }
       }
 
-      user_id = req.user._id
+      let user_id = req.user._id
       //console.log(req.user._id)
       //console.log(_CC.usersDb.get(user_id)._id)
       const dbUser = await db.get(user_id)
@@ -44,7 +44,7 @@ export default function (db) {
         //console.log("{user_id}") 
         //console.log("/n")
         //accessibleUsers = await db.get(user_id).groupedWith
-        accessibleUsers = dbUser.groupedWith
+        let accessibleUsers = dbUser.groupedWith
         console.log("{grouped}") 
         console.log(accessibleUsers) 
         const docsTwo = await db.allDocs({ keys: accessibleUsers , include_docs: true })
