@@ -23,6 +23,6 @@ EXPOSE 80
 CMD ./Dockerstart.sh
 
 RUN npm install --production --silent && \
-    npm install -g typescript 
+    npm install -g typescript \
     npm run build && \
     mkdir -p /data/dbs  
