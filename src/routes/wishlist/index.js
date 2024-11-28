@@ -36,21 +36,27 @@ export default function (db) {
       }
 
       let user_id = req.user._id
-      //console.log(req.user._id)
-      //console.log(_CC.usersDb.get(user_id)._id)
-      const dbUser = await db.get(user_id)
-      console.log("got user " , dbUser , "with  group bool" + dbUser.grouped )
-      if (dbUser.grouped){
-        //console.log("{user_id}") 
-        //console.log("/n")
-        //accessibleUsers = await db.get(user_id).groupedWith
-        let accessibleUsers = dbUser.groupedWith
-        console.log("{grouped}") 
-        console.log(accessibleUsers) 
-        const docsTwo = await db.allDocs({ keys: accessibleUsers , include_docs: true })
-        console.log(docsTwo)
-        //res.render('wishlists', { title: _CC.lang('WISHLISTS_TITLE'), accesible_users , totals })
-        res.render('wishlists', { title: _CC.lang('WISHLISTS_TITLE'), users: docsTwo.rows, totals })
+      if (user_id != "_CCUNKNOWN") {
+        //console.log(req.user._id)
+        //console.log(_CC.usersDb.get(user_id)._id)
+        const dbUser = await db.get(user_id)
+        console.log("got user " , dbUser , "with  group bool" + dbUser.grouped )
+        if (dbUser.grouped){
+          //console.log("{user_id}") 
+          //console.log("/n")
+          //accessibleUsers = await db.get(user_id).groupedWith
+          let accessibleUsers = dbUser.groupedWith
+          console.log("{grouped}") 
+          console.log(accessibleUsers) 
+          const docsTwo = await db.allDocs({ keys: accessibleUsers , include_docs: true })
+          console.log(docsTwo)
+          //res.render('wishlists', { title: _CC.lang('WISHLISTS_TITLE'), accesible_users , totals })
+          res.render('wishlists', { title: _CC.lang('WISHLISTS_TITLE'), users: docsTwo.rows, totals })
+        }
+        else {
+          const docs = await db.allDocs({ include_docs: true })
+          res.render('wishlists', { title: _CC.lang('WISHLISTS_TITLE'), users: docs.rows, totals })
+        }
       }
       else {
         const docs = await db.allDocs({ include_docs: true })
